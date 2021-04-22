@@ -1,0 +1,13 @@
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+// Container around all, see layout.js
+
+.container {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
