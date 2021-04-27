@@ -5,8 +5,9 @@ export default function Home() {
 	return (
 		<>
 			<Head title="Holidaze" />
-
-			<Heading h1="Home" />
+			<div className="hero_image">
+				<Heading h1="Home" />
+			</div>
 		</>
 	);
 }
