@@ -34,11 +34,23 @@ export default function LoginForm() {
         setSubmitting(true);
         setLoginError(null);
 
-        // console.log(data);
+        console.log(data.username);
+        console.log(data.password);
+
+        const data2 = JSON.stringify({ identifier: data.username, password: data.password });
+
+
+        // const JSONdata = { identifier: data.username, password: data.password };
 
         try {
-			const response = await axios.post(auth_url, data);
-			console.log(response.data);
+			// const { response } = await axios.post("http://localhost:1337/auth/local", {
+            //     identifier: data.username,
+            //     password: data.password,
+            // });
+
+            const { response } = await axios.post("http://localhost:1337/auth/local", data2);
+
+			console.log("response", response.data);
 		} catch (error) {
 			console.log("error", error);
 			setLoginError(error.toString());
@@ -52,11 +64,11 @@ export default function LoginForm() {
         <Form onSubmit={handleSubmit(onSubmit)} id="loginform">
             {loginError && <ValidationError>{loginError}</ValidationError>}
             <Form.Group controlId="username">
-                <Form.Control name="username" className="test" type="text" placeholder="Username.." {...register("username")}/>
+                <Form.Control name="username" className="test" placeholder="Username.." {...register("username")}/>
             </Form.Group>
 
             <Form.Group controlId="password">
-                <Form.Control name="password" type="text" placeholder="Password.." {...register("password")}/>
+                <Form.Control name="password" placeholder="Password.." {...register("password")}/>
             </Form.Group>
 
             <Button id="loginform_button" variant="primary" type="submit">
