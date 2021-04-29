@@ -1,13 +1,17 @@
 import Head from "../components/layout/Head";
-import Heading from "../components/layout/Heading";
+import Hero from "../components/layout/Hero";
+import Layout from "../components/layout/Layout";
 
 export default function Home() {
 	return (
 		<>
 			<Head title="Holidaze" />
-			<div className="hero_image">
-				<Heading h1="Home" />
-			</div>
+			<Layout>
+				<Hero />
+				<div className="px-2 content">
+					Hello
+				</div>
+			</Layout>
 		</>
 	);
 }

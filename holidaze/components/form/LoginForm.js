@@ -2,19 +2,20 @@ import { base_url, token_url } from "../../constants/api";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
+import { useRouter } from 'next/router';
 
 // Internal components
 import ValidationError from "./common/ValidationError";
+import AuthContext from "../../context/AuthContext";
 
 
 
 const auth_url = base_url + token_url;
-console.log(auth_url);
 
 const schema = yup.object().shape({
 	username: yup.string().required("Please enter your username"),
@@ -30,6 +31,10 @@ export default function LoginForm() {
 		resolver: yupResolver(schema),
 	});
 
+    const router = useRouter();
+
+    const [auth, setAuth] = useContext(AuthContext);
+
     async function onSubmit(data) {
         setSubmitting(true);
         setLoginError(null);
@@ -37,20 +42,15 @@ export default function LoginForm() {
         console.log(data.username);
         console.log(data.password);
 
-        const data2 = JSON.stringify({ identifier: data.username, password: data.password });
-
-
-        // const JSONdata = { identifier: data.username, password: data.password };
+        const auth_data = { identifier: data.username, password: data.password };
 
         try {
-			// const { response } = await axios.post("http://localhost:1337/auth/local", {
-            //     identifier: data.username,
-            //     password: data.password,
-            // });
 
-            const { response } = await axios.post("http://localhost:1337/auth/local", data2);
-
+            const response = await axios.post(auth_url, auth_data);
 			console.log("response", response.data);
+            setAuth(response.data);
+			router.push("/admin");
+
 		} catch (error) {
 			console.log("error", error);
 			setLoginError(error.toString());
@@ -64,7 +64,7 @@ export default function LoginForm() {
         <Form onSubmit={handleSubmit(onSubmit)} id="loginform">
             {loginError && <ValidationError>{loginError}</ValidationError>}
             <Form.Group controlId="username">
-                <Form.Control name="username" className="test" placeholder="Username.." {...register("username")}/>
+                <Form.Control name="username" placeholder="Username.." {...register("username")}/>
             </Form.Group>
 
             <Form.Group controlId="password">

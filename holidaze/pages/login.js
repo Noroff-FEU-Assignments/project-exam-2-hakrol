@@ -1,15 +1,20 @@
 import Head from "../components/layout/Head";
 import Heading from "../components/layout/Heading";
 import LoginForm from "../components/form/LoginForm";
+import Layout from "../components/layout/Layout";
 
-function login() {
+function Login() {
     return (
 		<>
 			<Head title="Login" />
-			<Heading h1="Login" />
-			<LoginForm />
+			<Layout>
+				<div className="px-2 content">
+						<Heading h1="Login" />
+						<LoginForm />
+				</div>
+			</Layout>
 		</>
     )
 }
 
-export default login
+export default Login
