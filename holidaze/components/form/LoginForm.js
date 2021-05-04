@@ -35,6 +35,10 @@ export default function LoginForm() {
 
     const [auth, setAuth] = useContext(AuthContext);
 
+    // setAuth("test");
+    // console.log(auth);
+    
+
     async function onSubmit(data) {
         setSubmitting(true);
         setLoginError(null);
@@ -48,7 +52,7 @@ export default function LoginForm() {
 
             const response = await axios.post(auth_url, auth_data);
 			console.log("response", response.data);
-            setAuth(response.data);
+            setAuth(response.data.jwt);
 			router.push("/admin");
 
 		} catch (error) {
@@ -61,6 +65,7 @@ export default function LoginForm() {
 
 
     return (
+        <>
         <Form onSubmit={handleSubmit(onSubmit)} id="loginform">
             {loginError && <ValidationError>{loginError}</ValidationError>}
             <Form.Group controlId="username">
@@ -75,5 +80,6 @@ export default function LoginForm() {
             {submitting ? "Logging in..." : "Login"}
             </Button>
         </Form>
+        </>
     )
 }

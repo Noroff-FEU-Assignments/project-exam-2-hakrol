@@ -12,24 +12,42 @@ export default function Places(props) {
         <>
         <Head title="Places" />
         <Layout>
-        <div className="px-2 content">
-			<Heading h1="Places" />
-            <div className="list">
-                {props.places.map((place) => {
+            <div className="px-2 content">
+                <Heading h1="Places" />
+                <div className="list">
+                    {props.places.map((place) => {
 
-                    const image_url = base_url + place.image.[0].url;
+                        console.log(place);
+                        // console.log("http://localhost:1337" + place.image[0].url)
 
-                    return  <div className="list_card" key={place.id}>
-                                <img src={image_url} width="300" height="200" alt="My image" />
-                                <h4>{place.title}</h4> 
-                                <p>{place.description}</p>  
-                                <Link href={`places/${place.id}`}><Button variant="primary">Click</Button></Link>             
-                            </div>;
-                })}
+                        // let image_url = "/assets/noimage.png";
+                        // if (place.image == undefined) {
+                        //     image_url = "/assets/noimage.png";
+                        // } else {
+                        const image_url = base_url + place.image[0].url;
+
+                        // const image_url = base_url + place.image[0].url;
+                        // }
+                        // const image_url = "/assets/noimage.png";
+                        // const image_url = base_url + place.image[0].url;
+
+                        // (place.image[0] = undefined) && (image_url = place.image[0].url);
+
+                        // console.log(place.image);
+
+                        // console.log(place);
+
+                        return  <div className="list_card" key={place.id}>
+                                    <img src={image_url} width="300" height="200" alt="My image" />
+                                    <h4>{place.title}</h4> 
+                                    <p>{place.description}</p>  
+                                    <Link href={`places/${place.id}`}><Button variant="primary">Click</Button></Link>             
+                                </div>;
+                    })}
+
+                </div>
 
             </div>
-
-		</div>
         </Layout>
         </>
     )
