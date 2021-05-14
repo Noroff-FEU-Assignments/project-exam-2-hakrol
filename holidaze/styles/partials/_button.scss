@@ -1,8 +1,17 @@
 .btn {
   width: 190px;
-  height: 40px;
   border-radius: 2em;
-  font-family: $Fredoka-One;
-  background-color: white;
-  color: black;
+  font-family: $Paragraph-font;
+  background-color: $alabaster;
+  color: $mine-shaft;
+  border: 1px solid $mine-shaft;
+
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
+    background-color: $mine-shaft;
+    color: $alabaster;
+    border: 1px solid $mine-shaft;
+  }
 }

@@ -8,9 +8,11 @@ function Admin() {
         <>
         <Head title="Holidaze" />
         <Layout>
-            <div className="px-2 content">
-                <Heading h1="Admin" />
-                <AdminPanel />
+            <div className="bg-admin">
+                <div className="px-2 content">
+                    <Heading h1="Admin" />
+                    <AdminPanel />
+                </div>
             </div>
         </Layout>
         </>

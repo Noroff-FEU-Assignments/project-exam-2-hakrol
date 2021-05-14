@@ -9,9 +9,11 @@ function Contact() {
         <>
         <Head title="Holidaze" />
         <Layout>
-            <div className="px-2 content">
-                <Heading h1="Contact" />
-                <ContactForm />
+            <div className="bg-contact">
+                <div className="px-2 content">
+                    <Heading h1="Contact" />
+                    <ContactForm />
+                </div>
             </div>
         </Layout>
         </>

@@ -8,9 +8,11 @@ function Login() {
 		<>
 			<Head title="Login" />
 			<Layout>
-				<div className="px-2 content">
-						<Heading h1="Login" />
-						<LoginForm />
+				<div className="bg-login">
+					<div className="px-2 content">
+							<Heading h1="Login" />
+							<LoginForm />
+					</div>
 				</div>
 			</Layout>
 		</>

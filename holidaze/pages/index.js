@@ -9,9 +9,7 @@ export default function Home() {
 			<Head title="Holidaze" />
 			<Layout>
 				<Hero />
-				<div className="px-2 content">
-					Hello
-				</div>
+				<div className="bg-home" />
 			</Layout>
 		</>
 	);

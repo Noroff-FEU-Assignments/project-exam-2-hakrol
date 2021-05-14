@@ -1,9 +1,10 @@
-nav {
-  background: darkred;
-  padding: 1rem;
+.navbar-background {
+  margin: 0 auto;
+  background-color: $mine-shaft;
 }
 
-nav a {
-  color: white;
-  margin-right: 10px;
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 20px;
 }

@@ -1,3 +1,9 @@
+.form {
+  &-login,
+  &-contact {
+    margin-bottom: 250px;
+  }
+}
 // Form
 
 .form-group {
@@ -10,26 +16,28 @@
 }
 
 // Form error
-.form-error {
-  display: flex;
-  max-width: 544px;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffa1a1;
-  margin: 5px 0;
-  border-radius: 0 20px 20px 0;
+.form {
+  &-error {
+    display: flex;
+    max-width: 544px;
+    align-items: center;
+    justify-content: center;
+    background-color: $sweet-pink;
+    margin: 5px 0;
+    border-radius: 20px;
+  }
+
+  &-success {
+    display: flex;
+    max-width: 544px;
+    align-items: center;
+    justify-content: center;
+    background-color: $mint-green;
+    margin: 5px 0;
+    border-radius: 20px;
+  }
 
   @media (max-width: 576px) {
     width: 100%;
-  }
-}
-
-// Form alert
-
-form {
-  .alert {
-    max-width: 544px;
-    background-color: $mint-green;
-    border-radius: none;
   }
 }

@@ -10,12 +10,15 @@ import axios from "axios";
 import { useRouter } from 'next/router';
 
 // Internal components
+import ValidationSuccess from "./common/ValidationSuccess";
 import ValidationError from "./common/ValidationError";
 import AuthContext from "../../context/AuthContext";
 
 
 
 const auth_url = base_url + token_url;
+
+console.log(auth_url)
 
 const schema = yup.object().shape({
 	username: yup.string().required("Please enter your username"),
@@ -66,7 +69,7 @@ export default function LoginForm() {
 
     return (
         <>
-        <Form onSubmit={handleSubmit(onSubmit)} id="loginform">
+        <Form onSubmit={handleSubmit(onSubmit)} className="form-login">
             {loginError && <ValidationError>{loginError}</ValidationError>}
             <Form.Group controlId="username">
                 <Form.Control name="username" placeholder="Username.." {...register("username")}/>

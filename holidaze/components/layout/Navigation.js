@@ -6,6 +6,14 @@ import AuthContext from "../../context/AuthContext";
 import Button from "react-bootstrap/Button";
 import { useRouter } from 'next/router';
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import Home from "../../pages";
+import Admin from "../../pages/admin";
+import Contact from "../../pages/contact";
+import Places from "../../pages/places";
+
+
 function Navigation() {
 
     const [auth, setAuth] = useContext(AuthContext);
@@ -18,8 +26,9 @@ function Navigation() {
     }
 
     return (
-            <Navbar bg="light" expand="lg">
-                <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+        <div className="navbar-background">
+            <Navbar expand="lg" variant="dark">
+                <Navbar.Brand href="/">Holidaze</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
@@ -29,7 +38,7 @@ function Navigation() {
                         {auth ? (
                             <>
                                 <NavLink href="/admin">Admin</NavLink>
-                                <Button onClick={logout}>Log out</Button>
+                                <Button size="sm" onClick={logout}>Log out</Button>
                             </>
                         ) : (
                             <NavLink href="/login">Login</NavLink>
@@ -37,6 +46,7 @@ function Navigation() {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+        </div>
     )
 }
 

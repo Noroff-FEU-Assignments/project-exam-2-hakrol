@@ -1,4 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
+@import "react-bootstrap-typeahead/css/Typeahead.css";
 
 @import "partials/variables";
 
@@ -9,5 +10,7 @@
 @import "partials/typography";
 @import "partials/form";
 @import "partials/button";
-@import "partials/Navigation";
 @import "partials/hero";
+@import "partials/adminpanel";
+@import "partials/searchbar";
+@import "partials/testimonial-card";

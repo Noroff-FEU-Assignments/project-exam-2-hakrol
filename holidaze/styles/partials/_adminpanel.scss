@@ -1,0 +1,62 @@
+.adminpanel-information {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 250px;
+}
+
+.messages-container {
+  margin-top: 45px;
+  max-width: 544px;
+  width: 100%;
+  background-color: $mercury;
+  border-radius: 20px;
+  padding: 15px;
+
+  .message {
+    padding: 25px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 5px 0;
+    font-weight: bold;
+    background-color: $alabaster;
+
+    &-date,
+    &-email,
+    &-name {
+      color: grey;
+    }
+
+    &-text {
+      margin-top: 10px;
+    }
+  }
+}
+
+.enquires-container {
+  margin-top: 45px;
+  max-width: 544px;
+  width: 100%;
+  background-color: $mercury;
+  border-radius: 20px;
+  padding: 15px;
+
+  .enquire {
+    padding: 25px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin: 5px 0;
+    font-weight: bold;
+    background-color: $alabaster;
+
+    &-date,
+    &-email,
+    &-name {
+      color: grey;
+    }
+
+    &-information {
+      margin-top: 10px;
+    }
+  }
+}

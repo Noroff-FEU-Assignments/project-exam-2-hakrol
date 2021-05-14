@@ -5,12 +5,13 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Heading from "../layout/Heading";
-import MediaImport from "./media/MediaImport";
-import axios from "axios";
+import Alert from "react-bootstrap/Alert"
 
 // form
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import ValidationError from "../form/common/ValidationError";
+import ValidationSuccess from "../form/common/ValidationSuccess";
 
 
 const schema = yup.object().shape({
@@ -21,7 +22,7 @@ const schema = yup.object().shape({
 export default function AddPlace() {
     const [submitting, setSubmitting] = useState(false);
     const [serverError, setServerError] = useState(null);
-	const [file, setFile] = useState(null);
+	const [submitted, setSubmitted] = useState(false);
 
 
     const router = useRouter();
@@ -34,17 +35,15 @@ export default function AddPlace() {
     async function onSubmit(data) {
 		setSubmitting(true);
 		setServerError(null);
-		setFile(data.files[0]);
-		
+		setSubmitted(false);
+		console.log(data.files[0]);
+		// setSubmitted(true);
+
 		const formData = new FormData()
 		formData.append("data", JSON.stringify({title: data.title, description: data.description}));
-		formData.append("files.image", file);
+		formData.append("files.image", data.files[0]);
 
-		// const response = await http.post("/places", formData);
-
-		// const uploadableData = {title: data.title, description: data.description, image: data.files[0]};
-
-		data.status = "publish";		
+		data.status = "publish";
 
 		console.log(data);
 
@@ -58,13 +57,16 @@ export default function AddPlace() {
 			setServerError(error.toString());
 		} finally {
 			setSubmitting(false);
+			setSubmitted(true);
 		}
 	}
 
 	return (
         <>
-			<Heading content="Add post" />
+			<h2>Add new place</h2>
 			<Form onSubmit={handleSubmit(onSubmit)}>
+				{serverError ? <ValidationError>{serErrorerv}</ValidationError> : ""}
+				{submitted ? <ValidationSuccess><p>Added</p></ValidationSuccess> : ""}
                 <Form.Group controlId="title">
                     <Form.Control name="title" placeholder="Title.." {...register("title")}/>
                 </Form.Group>
