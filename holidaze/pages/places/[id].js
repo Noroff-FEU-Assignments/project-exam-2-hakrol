@@ -137,6 +137,7 @@ function Place( {place} ) {
                     <Heading h1={place.title} className="m-auto place_heading"/>
                     <div>
                         {/* <img className="place_header-image" src={image_url} alt="My image" /> */}
+                        <img className="place_header-image" src="/assets/fillerImage.jpg" alt="My image" />
                     </div>
                     <Button className="place_button" onClick={() => setModalShow(true)}>Book now!</Button>
                     <div className="place_description">

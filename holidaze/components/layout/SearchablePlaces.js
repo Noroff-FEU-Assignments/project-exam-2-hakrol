@@ -112,8 +112,8 @@ export default function searchablePlaces() {
                     // console.log(place.image[0].url)
                     return <div key={place.id} className="list_card">
                                     {/* <img src={base_url + place.image[0].url} width="300" height="200"></img> */}
+                                    <img src="/assets/fillerImage.jpg" width="300" height="200"></img>
                                     <h4>{place.title}</h4>
-                                    <p>{place.description}</p>  
                                     <Link href={`places/${place.id}`}><Button variant="primary">Click</Button></Link>
 
                             </div>;
