@@ -1,17 +1,38 @@
 .btn {
-  width: 190px;
-  border-radius: 2em;
-  font-family: $Paragraph-font;
-  background-color: $alabaster;
-  color: $mine-shaft;
-  border: 1px solid $mine-shaft;
-
-  &:hover,
-  &:active,
-  &:focus,
-  &:visited {
-    background-color: $mine-shaft;
-    color: $alabaster;
+    width: 190px;
+    border-radius: 2em;
+    font-family: $Paragraph-font;
+    background-color: white;
+    color: $mine-shaft;
     border: 1px solid $mine-shaft;
-  }
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        background-color: $mine-shaft;
+        color: $alabaster;
+        border: 1px solid $mine-shaft;
+    }
+}
+
+.logout-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+
+    @media (max-width: 600px) {
+        height: 50px;
+        margin-top: 25px;
+        margin: 0 auto;
+    }
+}
+
+.place_button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 45px auto;
+    width: 150px;
 }

@@ -1,108 +1,121 @@
 .content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 // Container around all, see layout.js
 
 .container {
-  max-width: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  background-color: $alabaster;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: $alabaster;
 }
 
 .heading {
-  padding: 45px 0;
+    padding: 45px 0;
 }
 
 //background images on pages
 
 .bg {
-  // &-home,
-  &-places,
-  &-place,
-  &-contact,
-  &-login {
-    animation: move 3s infinite alternate;
-    animation-timing-function: linear;
-    background-size: cover;
-    min-height: 1080px;
-    background-position: 50% 18%;
-    background-image: url(/assets/background.png);
-    @media (max-width: 600px) {
-      background-image: url(/assets/background-mobile.png);
+    // &-home,
+    &-places,
+    &-place,
+    &-contact,
+    &-login {
+        background-size: cover;
+        background-position: bottom;
+        min-height: 1088px;
+        background-image: url(/assets/background-3.png);
     }
-
-    @keyframes move {
-      from {
-        background-position: 50% 18%;
-      }
-      to {
-        background-position: 50% 20%;
-      }
-    }
-  }
 }
 
-// List of places on the Places page
-
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
 
-  @media (max-width: 600px) {
-    justify-content: center;
-  }
+    @media (max-width: 600px) {
+        justify-content: center;
+    }
 }
 
 .list_card {
-  width: 300px;
-  height: 400px;
-  text-align: center;
-  border-radius: 30px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.445);
-  box-shadow: 0px 0px 5px $mine-shaft;
-  margin-bottom: 40px;
-  margin-right: 45px;
-  background-color: $alabaster;
-  @media (max-width: 600px) {
-    margin-right: 0;
-  }
+    width: 300px;
+    text-align: center;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.445);
+    box-shadow: 0px 0px 5px $mine-shaft;
+    margin-bottom: 40px;
+    margin-right: 45px;
+    background-color: $alabaster;
 
-  h4 {
-    margin: 10px 0;
-  }
+    @media (max-width: 600px) {
+        margin-right: 0;
+    }
 
-  .btn {
-    margin: 30px 0;
-    bottom: 0;
-    // align-items: flex-end;
-  }
+    &-information-container {
+        padding: 5px 10px;
+    }
+
+    .btn {
+        width: 100%;
+        border-radius: 0px;
+        border: none;
+        background-color: $mine-shaft;
+        height: 50px;
+        color: white;
+        &:hover {
+            color: $mine-shaft;
+            background-color: white;
+            border: none;
+        }
+    }
+
+    &-information-details {
+        padding: 20px;
+        margin: 5px;
+        background-color: white;
+        border-radius: 20px;
+        text-align: left;
+
+        // margin
+    }
+
+    img {
+        margin-bottom: 5px;
+    }
 }
 
-// Each individual place after clicking on a place from the Places page.
 .place {
-  text-align: center;
-  max-width: 900px;
-  margin-bottom: 250px;
+    text-align: left;
+    max-width: 900px;
+    margin-bottom: 250px;
 
-  &_header-image {
-    border-radius: 20px;
-    width: 100%;
-  }
-  &_button {
-    margin: 45px 0;
-  }
+    &_header-image {
+        border-radius: 20px;
+        width: 100%;
+    }
+    &_button {
+        margin: 45px 0;
+    }
 
-  &_description {
-    width: 100%;
-    border: 1px solid;
-    border-radius: 20px;
-    padding: 45px;
-    background-color: $alabaster;
-  }
+    &_price {
+        font-size: 1.3em;
+    }
+
+    &_information-container {
+        width: 100%;
+        border: 1px solid;
+        border-radius: 20px;
+        padding: 45px;
+        background-color: $alabaster;
+    }
+}
+
+.explainer-text {
+    color: grey;
 }

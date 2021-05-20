@@ -1,10 +1,24 @@
 .navbar-background {
-  margin: 0 auto;
-  background-color: $mine-shaft;
+    margin: 0 auto;
+    background-color: $mine-shaft;
 }
 
 .navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    text-decoration: underline white;
+    text-decoration-thickness: 0.3em;
+}
+
+.active {
+    text-decoration: underline white;
+    text-decoration-thickness: 0.3em;
 }

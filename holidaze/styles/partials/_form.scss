@@ -1,43 +1,50 @@
 .form {
-  &-login,
-  &-contact {
-    margin-bottom: 250px;
-  }
+    &-login,
+    &-contact {
+        margin-bottom: 250px;
+        background-color: white;
+        max-width: 544px;
+        padding: 45px;
+        border-radius: 20px;
+        @media (max-width: 600px) {
+            padding: 15px;
+        }
+    }
 }
 // Form
 
 .form-group {
-  max-width: 544px;
-  margin-bottom: 40px;
+    max-width: 544px;
+    margin-bottom: 40px;
 }
 
 .form-control {
-  border-radius: 30px;
+    border-radius: 30px;
 }
 
 // Form error
 .form {
-  &-error {
-    display: flex;
-    max-width: 544px;
-    align-items: center;
-    justify-content: center;
-    background-color: $sweet-pink;
-    margin: 5px 0;
-    border-radius: 20px;
-  }
+    &-error {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $sweet-pink;
+        margin: 5px 0;
+        border-radius: 20px;
+        padding: 10px;
+    }
 
-  &-success {
-    display: flex;
-    max-width: 544px;
-    align-items: center;
-    justify-content: center;
-    background-color: $mint-green;
-    margin: 5px 0;
-    border-radius: 20px;
-  }
+    &-success {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $mint-green;
+        margin: 5px 0;
+        border-radius: 20px;
+        padding: 10px;
+    }
 
-  @media (max-width: 576px) {
-    width: 100%;
-  }
+    @media (max-width: 576px) {
+        width: 100%;
+    }
 }

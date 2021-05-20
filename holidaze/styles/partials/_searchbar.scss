@@ -1,30 +1,30 @@
 .search {
-  width: 100%;
-  max-width: 544px;
+    width: 100%;
+    max-width: 544px;
 }
 
 .search-suggestion-container {
-  max-width: 544px;
-  margin-bottom: 45px;
-  width: 100%;
-  border-radius: 20px;
-  background-color: $mercury;
-  padding-left: 10px;
-  position: absolute;
+    max-width: 544px;
+    margin-bottom: 45px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: white;
+    padding-left: 10px;
+    position: absolute;
 
-  a {
-    color: black;
-  }
+    a {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 .search-suggestions {
-  margin: 5px;
-  text-align: left;
-  font-size: 12px;
-  cursor: pointer;
-  transition: all 0.5s;
-  &:hover {
-    padding-left: 10px;
-    font-weight: bold;
-  }
+    margin: 5px;
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+        padding-left: 10px;
+    }
 }

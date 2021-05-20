@@ -5,18 +5,18 @@ import Layout from "../components/layout/Layout";
 
 function Login() {
     return (
-		<>
-			<Head title="Login" />
-			<Layout>
-				<div className="bg-login">
-					<div className="px-2 content">
-							<Heading h1="Login" />
-							<LoginForm />
-					</div>
-				</div>
-			</Layout>
-		</>
-    )
+        <>
+            <Head title="Login" />
+            <Layout>
+                <div className="bg-login">
+                    <div className="px-2 content">
+                        <Heading h1="Login" />
+                        <LoginForm />
+                    </div>
+                </div>
+            </Layout>
+        </>
+    );
 }
 
-export default Login
+export default Login;

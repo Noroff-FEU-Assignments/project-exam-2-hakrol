@@ -11,7 +11,7 @@ function AdminPanel() {
                 <Messages />
             </div>
         </div>
-    )
+    );
 }
 
-export default AdminPanel
+export default AdminPanel;
