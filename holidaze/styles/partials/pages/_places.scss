@@ -1,36 +1,4 @@
-.content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-// Container around all, see layout.js
-
-.container {
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background-color: $alabaster;
-}
-
-.heading {
-    padding: 45px 0;
-}
-
-//background images on pages
-
-.bg {
-    // &-home,
-    &-places,
-    &-place,
-    &-contact,
-    &-login {
-        background-size: cover;
-        background-position: bottom;
-        min-height: 1088px;
-        background-image: url(/assets/background-opacity.png);
-    }
-}
+// LIST OF PLACES
 
 .list {
     display: flex;
@@ -41,6 +9,8 @@
         justify-content: center;
     }
 }
+
+// EACH PLACE ON A CARD
 
 .list__card {
     width: 300px;
@@ -118,4 +88,13 @@
 
 .explainer-text {
     color: grey;
+}
+
+// BUTTON ON INDIVIDUAL PLACES PAGE
+.place__button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 45px auto;
+    width: 150px;
 }

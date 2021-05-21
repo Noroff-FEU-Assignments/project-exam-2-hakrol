@@ -1,16 +1,20 @@
+// External styling
 @import "~bootstrap/scss/bootstrap";
-@import "react-bootstrap-typeahead/css/Typeahead.css";
 
-@import "partials/variables";
+// Base
+@import "partials/base/variables";
+@import "partials/base/typography";
 
-// Custom
-@import "partials/layout";
-@import "partials/nav";
-@import "partials/footer";
-@import "partials/typography";
-@import "partials/form";
-@import "partials/button";
-@import "partials/hero";
-@import "partials/adminpanel";
-@import "partials/searchbar";
-@import "partials/testimonial-card";
+// Layout
+@import "partials/layout/layout";
+@import "partials/layout/button";
+@import "partials/layout/nav";
+@import "partials/layout/footer";
+@import "partials/layout/form";
+@import "partials/layout/searchbar";
+@import "partials/layout/testimonial-card";
+
+// Pages
+@import "partials/pages/places";
+@import "partials/pages/admin";
+@import "partials/pages/index";

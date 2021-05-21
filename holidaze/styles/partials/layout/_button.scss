@@ -1,0 +1,17 @@
+.btn {
+    width: 190px;
+    border-radius: 2em;
+    font-family: $font-secondary;
+    background-color: white;
+    color: $mine-shaft;
+    border: 1px solid $mine-shaft;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        background-color: $mine-shaft;
+        color: $alabaster;
+        border: 1px solid $mine-shaft;
+    }
+}
