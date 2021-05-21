@@ -3,8 +3,8 @@ import { FaInstagram, FaFacebook } from "react-icons/fa";
 function Footer() {
     return (
         <footer className="footer">
-            <div className="footer_container">
-                <div className="footer_container_misc-elements">
+            <div className="footer__container">
+                <div className="footer__container__misc-elements">
                     <h4>Booking information</h4>
                     <ul>
                         <a href="#" className="footer-link">
@@ -18,7 +18,7 @@ function Footer() {
                         </a>
                     </ul>
                 </div>
-                <div className="footer_container_misc-elements">
+                <div className="footer__container__misc-elements">
                     <h4>Privacy</h4>
                     <ul>
                         <a href="#" className="footer-link">
@@ -29,7 +29,7 @@ function Footer() {
                         </a>
                     </ul>
                 </div>
-                <div className="footer_container_misc-elements">
+                <div className="footer__container__misc-elements">
                     <h4>Our partners</h4>
                     <ul>
                         <a href="#" className="footer-link">
@@ -40,7 +40,7 @@ function Footer() {
                         </a>
                     </ul>
                 </div>
-                <div className="footer_container_misc-elements">
+                <div className="footer__container__misc-elements">
                     <h4>Social media</h4>
                     <ul className="social-media-icons">
                         <a href="#" className="footer-link">
@@ -56,7 +56,7 @@ function Footer() {
                     </ul>
                 </div>
             </div>
-            <div className="footer_copyright">Copyright 2020</div>
+            <div className="footer__copyright">Copyright 2020</div>
         </footer>
     );
 }

@@ -169,27 +169,27 @@ function Place({ place }) {
                     <div className="px-2 content place">
                         <Heading
                             h1={place.title}
-                            className="m-auto place_heading"
+                            className="m-auto place__heading"
                         />
                         <div>
                             <img
-                                className="place_header-image"
+                                className="place__header-image"
                                 src={image_url}
                                 alt="My image"
                             />
                         </div>
                         <Button
-                            className="place_button"
+                            className="place__button"
                             onClick={() => setModalShow(true)}
                         >
                             <FaArrowAltCircleRight />
                             Book now!
                         </Button>
-                        <div className="place_information-container">
-                            <p className="place_price">
+                        <div className="place__information-container">
+                            <p className="place__price">
                                 Each night: {place.price} NOK
                             </p>
-                            <div className="place_description">
+                            <div className="place__description">
                                 <p>{place.description}</p>
                             </div>
                         </div>

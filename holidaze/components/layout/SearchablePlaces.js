@@ -117,16 +117,16 @@ export default function searchablePlaces() {
             <div className="list">
                 {placesToRender.map(function (place) {
                     return (
-                        <div key={place.id} className="list_card">
+                        <div key={place.id} className="list__card">
                             <img
                                 src={place.image[0].url}
                                 width="300"
                                 height="200"
                             />
-                            <div className="list_card-information">
+                            <div className="list__card-information">
                                 <h4>{place.title}</h4>
-                                <div className="list_card-information-container">
-                                    <div className="list_card-information-description">
+                                <div className="list__card-information-container">
+                                    <div className="list__card-information-description">
                                         <TextTrim
                                             refId={place.id}
                                             text={place.description}
@@ -136,8 +136,8 @@ export default function searchablePlaces() {
                                             textWrapperStyle={{}}
                                         />
                                     </div>
-                                    <div className="list_card-information-details">
-                                        <p className="list_card-information-price">
+                                    <div className="list__card-information-details">
+                                        <p className="list__card-information-price">
                                             Each night: {place.price} NOK
                                         </p>
                                     </div>

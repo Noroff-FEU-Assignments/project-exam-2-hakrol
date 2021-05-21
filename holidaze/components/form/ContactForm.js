@@ -1,13 +1,9 @@
-// External components
 import { useForm } from "react-hook-form";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import Alert from "react-bootstrap/Alert";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
-
-// Internal components
 import ValidationError from "./common/ValidationError";
 import ValidationSuccess from "./common/ValidationSuccess";
 

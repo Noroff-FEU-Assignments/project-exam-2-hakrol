@@ -2,7 +2,7 @@
     background-color: $mine-shaft;
     color: white;
 
-    &_container {
+    &__container {
         display: flex;
         justify-content: space-around;
         align-items: top;
@@ -21,7 +21,7 @@
             }
         }
 
-        &_misc-elements ul {
+        &__misc-elements ul {
             list-style: none;
             padding: 0;
             text-align: left;
@@ -29,7 +29,7 @@
         }
     }
 
-    &_copyright {
+    &__copyright {
         text-align: center;
     }
 

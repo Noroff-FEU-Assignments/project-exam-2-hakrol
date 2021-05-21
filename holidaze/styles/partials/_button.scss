@@ -1,7 +1,7 @@
 .btn {
     width: 190px;
     border-radius: 2em;
-    font-family: $Paragraph-font;
+    font-family: $paragraph-font;
     background-color: white;
     color: $mine-shaft;
     border: 1px solid $mine-shaft;
@@ -29,7 +29,7 @@
     }
 }
 
-.place_button {
+.place__button {
     display: flex;
     justify-content: space-around;
     align-items: center;

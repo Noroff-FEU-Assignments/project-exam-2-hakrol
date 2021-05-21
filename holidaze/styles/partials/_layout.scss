@@ -42,7 +42,7 @@
     }
 }
 
-.list_card {
+.list__card {
     width: 300px;
     text-align: center;
     border-radius: 30px;
@@ -95,19 +95,19 @@
     max-width: 900px;
     margin-bottom: 250px;
 
-    &_header-image {
+    &__header-image {
         border-radius: 20px;
         width: 100%;
     }
-    &_button {
+    &__button {
         margin: 45px 0;
     }
 
-    &_price {
+    &__price {
         font-size: 1.3em;
     }
 
-    &_information-container {
+    &__information-container {
         width: 100%;
         border: 1px solid;
         border-radius: 20px;
