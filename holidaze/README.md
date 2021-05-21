@@ -1,6 +1,6 @@
 ## Holidaze by Håkon R. Rolfsen
 
-This is the final exam at Noroff Frontend Development 2019 - 2020 by Håkon R. Rolfsen.
+This is the final exam at Noroff Frontend Development 2019 - 2021 by Håkon R. Rolfsen.
 
 ## Instruction
 
