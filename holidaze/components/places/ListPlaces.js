@@ -1,11 +1,11 @@
-import { base_url, places_url } from "../../constants/api";
+import { places_url } from "../../constants/api";
 import axios from "axios";
-import Form from "react-bootstrap/Form";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Link from "next/link";
-import { InputGroup } from "react-bootstrap";
 import TextTrim from "react-text-trim";
+import { InputGroup } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 
 export default function searchablePlaces() {
     const [places, setPlaces] = useState([]);
@@ -16,8 +16,6 @@ export default function searchablePlaces() {
         async function fetchData() {
             try {
                 const response = await axios.get(places_url);
-
-                console.log(response.data);
 
                 setPlaces(response.data);
                 setPlacesToRender(response.data);
@@ -30,7 +28,7 @@ export default function searchablePlaces() {
         fetchData();
     }, []);
 
-    // handle click on suggestions from searchbar
+    // When user click on a suggestion
     const handleClick = (event) => {
         const userSearch = event.target.innerHTML;
         const searchfield = document.querySelector(".searchbar");
@@ -46,11 +44,10 @@ export default function searchablePlaces() {
         setPlacesToRender(filteredPlaces);
     };
 
-    // Dsiplay places on enter in searchbar
+    // When user press "enter" during search
     const onKeyPress = (key) => {
         const keyValue = key.key;
 
-        console.log(keyValue);
         const searchValue = key.target.value.trim().toLowerCase();
 
         if (keyValue == "Enter") {
@@ -86,6 +83,7 @@ export default function searchablePlaces() {
 
     return (
         <>
+            {/* Searchbar */}
             <InputGroup className="search">
                 <Form.Control
                     className="searchbar"
@@ -99,6 +97,8 @@ export default function searchablePlaces() {
                     }}
                 />
             </InputGroup>
+
+            {/* Search suggestions */}
             <div className="search-suggestion-container">
                 {suggestedPlaces.map(function (place) {
                     return (
@@ -114,6 +114,8 @@ export default function searchablePlaces() {
                     );
                 })}
             </div>
+
+            {/* List of all places */}
             <div className="list">
                 {placesToRender.map(function (place) {
                     return (

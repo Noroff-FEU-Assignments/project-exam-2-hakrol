@@ -18,8 +18,7 @@ function Place({ place }) {
     const [confirmationModalShow, setConfirmationModalShow] = useState(false);
 
     const schema = yup.object().shape({
-        Name: yup.string().required("Please enter your username"),
-        Name: yup.string().required("Please enter your username"),
+        Name: yup.string().required("Please enter your name"),
     });
 
     const {
@@ -60,7 +59,7 @@ function Place({ place }) {
                 <Modal.Body>
                     <Form onSubmit={handleSubmit(onSubmit)}>
                         <Form.Group controlId="Place">
-                            <Form.Label>You about to book:</Form.Label>
+                            <Form.Label>You about to book</Form.Label>
                             <Form.Control
                                 type="text"
                                 name="Place"
@@ -128,9 +127,6 @@ function Place({ place }) {
                         </Button>
                     </Form>
                 </Modal.Body>
-                <Modal.Footer>
-                    <Button onClick={props.onHide}>Close</Button>
-                </Modal.Footer>
             </Modal>
         );
     }
